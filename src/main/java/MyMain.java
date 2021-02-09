@@ -4,8 +4,16 @@ public class MyMain {
 
     // Sorts the ArrayList using insertion sort
     public static ArrayList<Integer> insertionSort(ArrayList<Integer> list) {
-        
-        return null;
+        for (int i =1; i< list.size(); i++){
+            int kroom = list.get(i);
+            int x = i - 1;
+            while ((x > -1) &&(list.get(x).compareTo(kroom)== 1)){
+                list.set(x+ 1, list.get(x));
+                x--;
+            }
+            list.set(x+1, kroom);
+        }
+        return list;
     }
 
      // Merges two sorted arrays into one large combined
