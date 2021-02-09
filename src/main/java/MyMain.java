@@ -4,7 +4,7 @@ public class MyMain {
 
     // Sorts the ArrayList using insertion sort
     public static ArrayList<Integer> insertionSort(ArrayList<Integer> list) {
-        // YOUR CODE HERE
+        
         return null;
     }
 
@@ -12,11 +12,35 @@ public class MyMain {
      // sorted array
      // You may assume arr1 and arr2 are the same length
     public static int[] merge(int[] arr1, int[] arr2) { 
-        // YOUR CODE HERE
-        return null;
+        int[] lala = new int[arr1.length*2];
+        int oH = 0;
+        int nO = 0;
+        int i = 0;
+        while(oH<arr1.length&&nO<arr1.length){
+            int ma = Math.min(arr1[oH],arr2[nO]);
+            lala[i]=ma;
+            if(ma==arr1[oH]){
+                oH++;
+            }else{
+                nO++;
+            }
+            i++;
+        }
+        if(oH!=arr1.length){
+            for(int j = oH; j<arr1.length; j++){
+                lala[i] = arr1[j];
+                i++;
+            }
+        }else{
+            for(int j = nO; j<arr2.length; j++){
+                lala[i] = arr2[j];
+                i++;
+            }
+        }
+        return lala;
     }
 
     public static void main(String[] args) {
-        // You can test your code here
+        // You can test your code her
     }
 }
